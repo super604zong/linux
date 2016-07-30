@@ -158,10 +158,10 @@ void analyse(int len, char fen[100][256])
     }
     arg[i] = NULL;
     
-    for( i = 0; i<sum; i++ )
+  /*()  for( i = 0; i<sum; i++ )
     {
         printf("--=%s=-==-\n",arg[i]);
-    }
+    }*/
    /*
     if( execvp( arg[0], arg ) ==-1 )
     {
@@ -191,7 +191,7 @@ void analyse(int len, char fen[100][256])
     {
         if( strcmp( arg[i], ">" ) == 0  && arg[i+1] != NULL)
         {
-           printf("sdfsdfsdf\n");
+         //  printf("sdfsdfsdf\n");
             flag +=1;
             
             if( flag ==1 )
@@ -199,7 +199,7 @@ void analyse(int len, char fen[100][256])
                 t =O;
                 file = arg[i+1];
                 arg[i] =NULL;
-                printf("nxiasodef\n");
+             //   printf("nxiasodef\n");
             }
            // printf("%s\n",file);
         puts(file);
@@ -221,13 +221,13 @@ void analyse(int len, char fen[100][256])
         if(arg[i] != NULL && strcmp( arg[i], "<" ) == 0 && i!=0)
         {
             flag +=1;
-            printf("woshuji\n");
+         //   printf("woshuji\n");
             if( flag ==1 )
             {
                 t =I;
                 file = arg[i+1];
                 arg[i] =NULL;
-                printf("ljiefdfef\n");
+              //  printf("ljiefdfef\n");
             }
             else
             {
@@ -262,12 +262,12 @@ void analyse(int len, char fen[100][256])
         }
 
     }
-    printf("ewwere\n");
+ //   printf("ewwere\n");
       //  printf("%s=-=-==-\n", file);
-        for( i = 0; arg[i] != NULL; i++ )
+    /*    for( i = 0; arg[i] != NULL; i++ )
         {
             printf("%s\n", arg[i]);
-        }
+        }*/
     
     if( ( pid = fork() ) < 0 )
     {
@@ -337,7 +337,7 @@ void analyse(int len, char fen[100][256])
        case 3://在子进程中先执行管道符前面的，在父进程中执行后面的，父进程等待子进程结束
         if( pid == 0 )
         {
-           printf("sdfsadf\n"); 
+        //   printf("sdfsadf\n"); 
              
             if( (pid2 = fork()) <0 )
             {
